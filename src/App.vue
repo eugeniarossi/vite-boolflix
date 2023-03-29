@@ -20,6 +20,7 @@ export default {
   methods: {
     // definisco l'evento search
     search() {
+      store.searchResult = true;
       // cerca sull'API i film contenenti l'input dell'utente
       axios.get(store.config.url_movies, {
         params: {
@@ -32,14 +33,19 @@ export default {
           store.movieResults = response.data.results;
           // stampo in console il risultato
           console.log(store.movieResults);
-        })
+          if (store.movieResults.length === 0) {
+            store.searchResult = false;
+          }
+        });
+
+
     }
   }
 }
 </script>
 
 <template>
-  <HeaderApp @search="search"/>
+  <HeaderApp @search="search" />
   <MainApp />
 </template>
 
