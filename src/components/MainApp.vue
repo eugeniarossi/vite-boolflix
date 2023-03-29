@@ -14,7 +14,7 @@ export default {
 
 <template>
     <!-- stampo in pagina i dati dei film trovati -->
-    <div v-for="result in store.movieResults" v-if="store.searchResult === true"> 
+    <div v-for="result in store.movieResults" v-if="store.searchResult === true">
         <h2>Titolo: {{ result.title }}</h2>
         <h3>Titolo originale: {{ result.original_title }}</h3>
         <p>Lingua: {{ result.original_language }}</p>

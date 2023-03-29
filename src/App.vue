@@ -31,14 +31,10 @@ export default {
         .then((response) => {
           // salvo nello store il risultato della ricerca
           store.movieResults = response.data.results;
-          // stampo in console il risultato
-          console.log(store.movieResults);
           if (store.movieResults.length === 0) {
             store.searchResult = false;
           }
         });
-
-
     }
   }
 }
