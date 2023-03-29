@@ -1,16 +1,27 @@
 <script>
-import HelloApp from './components/HelloApp.vue';
+// importo lo store
+import { store } from './Store';
+// importo header e main
+import HeaderApp from './components/HeaderApp.vue';
+import MainApp from './components/MainApp.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloApp
+    HeaderApp,
+    MainApp
+  },
+  data() {
+    return {
+      store
+    }
   }
 }
 </script>
 
 <template>
-  <HelloApp />
+  <HeaderApp />
+  <MainApp />
 </template>
 
 <style lang="scss"></style>
