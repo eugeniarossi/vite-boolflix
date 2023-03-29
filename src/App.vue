@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios';
 // importo lo store
 import { store } from './Store';
 // importo header e main
@@ -15,12 +16,30 @@ export default {
     return {
       store
     }
+  },
+  methods: {
+    // definisco l'evento search
+    search() {
+      // cerca sull'API i film contenenti l'input dell'utente
+      axios.get(store.config.url_movies, {
+        params: {
+          api_key: store.config.api_key,
+          query: store.searchKey
+        }
+      })
+        .then((response) => {
+          // salvo nello store il risultato della ricerca
+          store.movieResults = response.data.results;
+          // stampo in console il risultato
+          console.log(store.movieResults);
+        })
+    }
   }
 }
 </script>
 
 <template>
-  <HeaderApp />
+  <HeaderApp @search="search"/>
   <MainApp />
 </template>
 
