@@ -1,3 +1,3 @@
-# Vue Template 
+# BoolFlix
 
-Template standard per progetti Vue con option API e SASS
+Vite + Vue
