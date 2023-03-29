@@ -3,8 +3,8 @@ import { reactive } from 'vue';
 
 export const store = reactive({
     searchKey: '',
-    movieResults: null,
-    tvshowsResults: null,
+    movieResults: [],
+    tvshowsResults: [],
     // stato della ricerca - default true
     searchStatus: true,
     // API URLs

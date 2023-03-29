@@ -37,6 +37,7 @@ export default {
             store.searchStatus = false;
           }
         });
+      store.searchKey = '';
     }
   }
 }
