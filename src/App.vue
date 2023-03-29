@@ -20,7 +20,8 @@ export default {
   methods: {
     // definisco l'evento search
     search() {
-      store.searchResult = true;
+      // azzero lo stato della ricerca
+      store.searchStatus = true;
       // cerca sull'API i film contenenti l'input dell'utente
       axios.get(store.config.url_movies, {
         params: {
@@ -31,8 +32,9 @@ export default {
         .then((response) => {
           // salvo nello store il risultato della ricerca
           store.movieResults = response.data.results;
+          // lo stato della ricerca diventa false se non ci sono risultati
           if (store.movieResults.length === 0) {
-            store.searchResult = false;
+            store.searchStatus = false;
           }
         });
     }
