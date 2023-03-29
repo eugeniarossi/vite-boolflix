@@ -1,9 +1,21 @@
 <script>
+import { store } from '../Store';
+
 export default {
-    name: 'HeaderApp'
+    name: 'HeaderApp',
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
 <template>
-    <div>search</div>
+    <div>
+        <!-- input -->
+        <input type="text" v-model="store.searchKey">
+        <!-- search button -->
+        <button type="button" @click="$emit('search')">search</button>
+    </div>
 </template>
