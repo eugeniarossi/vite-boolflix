@@ -18,11 +18,11 @@ export default {
 
 <template>
     <!-- lista dei film trovati -->
-    <ul v-if="store.searchResult === true">
+    <ul>
         <li v-for="result in store.movieResults">
             <CardElement :info="result"/>
         </li>
     </ul>
     <!-- alternativa per nessun risultato -->
-    <div v-else>Nessun risultato trovato</div>
+    <div v-show="store.searchResult === false">Nessun risultato trovato</div>
 </template>
