@@ -44,31 +44,47 @@ export default {
 
 <template>
     <!-- card -->
-    <div>
-        <!-- img cover -->
-        <div>
+    <article>
+        <!-- image -->
+        <div class="image">
             <img :src="imageUrl + info.poster_path" :alt="getTitle" v-if="info.poster_path !== null">
             <!-- alt cover -->
-            <div class="alt-cover" v-else>Copertina non disponibile</div> 
+            <div class="alt-cover" v-else>Copertina non disponibile</div>
         </div>
-        <!-- /img cover -->
-        <h3>{{ getTitle }}</h3>
-        <h4>{{ info.original_title }}</h4>
-        <!-- flag lingua -->
-        <country-flag :country="getLanguage" size='small' />
-        <!-- voto stelle -->
-        <div>
-            <!-- ciclo for stelle piene -->
-            <font-awesome-icon icon="fa-star" v-for="n in getVote" />
-            <!-- ciclo for stelle vuote -->
-            <font-awesome-icon icon="fa-regular fa-star" v-for="n in nStar - getVote" />
+        <!-- /image -->
+        <!-- caption -->
+        <div class="caption">
+            <!-- /img cover -->
+            <h3>{{ getTitle }}</h3>
+            <h4>{{ info.original_title }}</h4>
+            <!-- flag lingua -->
+            <country-flag :country="getLanguage" size='small' />
+            <!-- voto stelle -->
+            <div>
+                <!-- ciclo for stelle piene -->
+                <font-awesome-icon icon="fa-star" v-for="n in getVote" />
+                <!-- ciclo for stelle vuote -->
+                <font-awesome-icon icon="fa-regular fa-star" v-for="n in nStar - getVote" />
+            </div>
+            <!-- /voto stelle -->
         </div>
-        <!-- /voto stelle -->
-    </div>
+        <!-- /caption -->
+    </article>
     <!-- /card -->
 </template>
 
 <style scoped lang="scss">
+article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .caption {
+        padding: .625rem 1.25rem;
+    }
+}
+
 .alt-cover {
     width: 21.375rem;
 }
