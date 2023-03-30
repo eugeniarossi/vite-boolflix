@@ -6,7 +6,8 @@ export default {
     name: 'CardElement',
     props: {
         info: Object,
-        imageUrl: String
+        imageUrl: String,
+        nStar: Number
     },
     components: {
         CountryFlag
@@ -48,11 +49,12 @@ export default {
         <h3>{{ getTitle }}</h3>
         <h4>{{ info.original_title }}</h4>
         <country-flag :country="getLanguage" size='small' />
-        <div>{{ getVote }}</div>
-        <!-- test font awesome -->
-        <font-awesome-icon icon="fa-regular fa-star" />
-        <font-awesome-icon icon="fa-star" />
-        <!-- /test font awesome -->
+        <!-- voto font awesome -->
+        <div>
+            <font-awesome-icon icon="fa-star" v-for="n in getVote" />
+            <font-awesome-icon icon="fa-regular fa-star" v-for="n in nStar - getVote" />
+        </div>
+        <!-- /voto font awesome -->
     </div>
     <!-- /card -->
 </template>

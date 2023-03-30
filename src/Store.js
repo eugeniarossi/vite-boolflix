@@ -15,7 +15,7 @@ export const store = reactive({
         url_movies: 'https://api.themoviedb.org/3/search/movie',
         url_tvshows: 'https://api.themoviedb.org/3/search/tv',
         url_img: 'https://image.tmdb.org/t/p/',
-        img_size: 'w342'
+        img_size: 'w342',
         /*
         "poster_sizes": [
   "w92",
@@ -27,5 +27,6 @@ export const store = reactive({
   "original"
 ]
 */
+        nStar: 5
     }
 });
