@@ -31,6 +31,10 @@ export default {
             } else {
                 return this.info.original_name;
             }
+        },
+        // calcolo del voto da 1 a 5 per eccesso
+        getVote() {
+            return Math.ceil(this.info.vote_average / 2);
         }
     }
 }
@@ -44,7 +48,11 @@ export default {
         <h3>{{ getTitle }}</h3>
         <h4>{{ info.original_title }}</h4>
         <country-flag :country="getLanguage" size='small' />
-        <div>{{ info.vote_average }}</div>
+        <div>{{ getVote }}</div>
+        <!-- test font awesome -->
+        <font-awesome-icon icon="fa-regular fa-star" />
+        <font-awesome-icon icon="fa-star" />
+        <!-- /test font awesome -->
     </div>
     <!-- /card -->
 </template>
