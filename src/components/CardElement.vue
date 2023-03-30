@@ -18,14 +18,14 @@ export default {
                     return 'gb';
                 case 'ja':
                     return 'jpn';
-                
+
                 default:
                     return this.info.original_language;
             }
         },
         // gestione titolo per film e tvshows
         getTitle() {
-            if(this.info.myType === 'movie'){
+            if (this.info.myType === 'movie') {
                 return this.info.title;
             } else {
                 return this.info.original_name;

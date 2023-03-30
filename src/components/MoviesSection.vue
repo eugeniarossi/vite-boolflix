@@ -20,7 +20,7 @@ export default {
     <!-- lista dei film trovati -->
     <ul>
         <li v-for="result in store.movieResults">
-            <CardElement :info="result"/>
+            <CardElement :info="result" />
         </li>
     </ul>
     <!-- alternativa per nessun risultato -->

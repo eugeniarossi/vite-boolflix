@@ -20,7 +20,7 @@ export default {
     <!-- lista dei tv shows trovati -->
     <ul>
         <li v-for="result in store.tvshowsResults">
-            <CardElement :info="result"/>
+            <CardElement :info="result" />
         </li>
     </ul>
     <!-- alternativa per nessun risultato -->
