@@ -4,6 +4,7 @@ import CountryFlag from 'vue-country-flag-next';
 
 export default {
     name: 'CardElement',
+    // dichiaro le props
     props: {
         info: Object,
         imageUrl: String,
@@ -49,12 +50,12 @@ export default {
         <h3>{{ getTitle }}</h3>
         <h4>{{ info.original_title }}</h4>
         <country-flag :country="getLanguage" size='small' />
-        <!-- voto font awesome -->
+        <!-- voto stelle -->
         <div>
             <font-awesome-icon icon="fa-star" v-for="n in getVote" />
             <font-awesome-icon icon="fa-regular fa-star" v-for="n in nStar - getVote" />
         </div>
-        <!-- /voto font awesome -->
+        <!-- /voto stelle -->
     </div>
     <!-- /card -->
 </template>
