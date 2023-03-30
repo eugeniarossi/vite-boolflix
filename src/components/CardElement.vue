@@ -46,7 +46,7 @@ export default {
     <!-- card -->
     <div>
         <img :src="imageUrl + info.poster_path" :alt="getTitle" v-if="info.poster_path !== null">
-        <div v-else>Copertina non disponibile</div>
+        <div class="alt-cover" v-else>Copertina non disponibile</div>
         <h3>{{ getTitle }}</h3>
         <h4>{{ info.original_title }}</h4>
         <country-flag :country="getLanguage" size='small' />
@@ -59,3 +59,9 @@ export default {
     </div>
     <!-- /card -->
 </template>
+
+<style scoped lang="scss">
+.alt-cover {
+    width: 21.375rem;
+}
+</style>

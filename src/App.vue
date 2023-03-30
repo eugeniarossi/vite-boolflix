@@ -70,8 +70,11 @@ export default {
 </script>
 
 <template>
-  <HeaderApp @search="search" />
-  <MainApp />
+  <div id="container">
+    <HeaderApp @search="search" />
+    <MainApp />
+  </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>
