@@ -1,25 +1,17 @@
 <script>
-// importo lo store
-import { store } from '../Store';
+    import MoviesSection from './MoviesSection.vue'
+    import TvshowsSection from './TvshowsSection.vue';
 
-export default {
-    name: 'MainApp',
-    data() {
-        return {
-            store
+    export default {
+        name: 'MainApp',
+        components: {
+            MoviesSection,
+            TvshowsSection
         }
     }
-}
 </script>
 
 <template>
-    <!-- stampo in pagina i dati dei film trovati -->
-    <div v-for="result in store.movieResults" v-if="store.searchStatus === true">
-        <h2>Titolo: {{ result.title }}</h2>
-        <h3>Titolo originale: {{ result.original_title }}</h3>
-        <p>Lingua: {{ result.original_language }}</p>
-        <p>Voto: {{ result.vote_average }}</p>
-    </div>
-    <!-- alternativa per nessun risultato -->
-    <div v-else>Nessun risultato trovato</div>
+    <MoviesSection />
+    <TvshowsSection />
 </template>

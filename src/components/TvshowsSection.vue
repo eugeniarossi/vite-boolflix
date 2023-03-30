@@ -1,11 +1,12 @@
 <script>
-import SearchElement from './SearchElement.vue';
+import CardElement from './CardElement.vue';
+// importo lo store
 import { store } from '../store';
 
 export default {
-    name: 'HeaderApp',
+    name: 'TvshowsSection',
     components: {
-        SearchElement
+        CardElement
     },
     data() {
         return {
@@ -16,5 +17,4 @@ export default {
 </script>
 
 <template>
-    <SearchElement />
 </template>

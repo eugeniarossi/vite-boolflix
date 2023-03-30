@@ -1,7 +1,7 @@
 <script>
 import axios from 'axios';
 // importo lo store
-import { store } from './Store';
+import { store } from './store';
 // importo header e main
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
@@ -21,7 +21,7 @@ export default {
     // definisco l'evento search
     search() {
       // azzero lo stato della ricerca
-      store.searchStatus = true;
+      store.searchResult = true;
       // cerca sull'API i film contenenti l'input dell'utente
       axios.get(store.config.url_movies, {
         params: {
@@ -34,7 +34,7 @@ export default {
           store.movieResults = response.data.results;
           // lo stato della ricerca diventa false se non ci sono risultati
           if (store.movieResults.length === 0) {
-            store.searchStatus = false;
+            store.searchResult = false;
           }
         });
       store.searchKey = '';
