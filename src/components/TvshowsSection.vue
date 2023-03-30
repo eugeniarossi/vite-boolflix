@@ -17,4 +17,12 @@ export default {
 </script>
 
 <template>
+    <!-- lista dei tv shows trovati -->
+    <ul>
+        <li v-for="result in store.tvshowsResults">
+            <CardElement :info="result"/>
+        </li>
+    </ul>
+    <!-- alternativa per nessun risultato -->
+    <div v-show="store.searchTvshowsResult === false">Nessun risultato trovato in tv shows</div>
 </template>

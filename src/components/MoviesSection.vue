@@ -24,5 +24,5 @@ export default {
         </li>
     </ul>
     <!-- alternativa per nessun risultato -->
-    <div v-show="store.searchResult === false">Nessun risultato trovato</div>
+    <div v-show="store.searchMoviesResult === false">Nessun risultato trovato in movies</div>
 </template>
