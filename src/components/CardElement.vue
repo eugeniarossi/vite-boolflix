@@ -1,5 +1,6 @@
 <script>
-import CountryFlag from 'vue-country-flag-next'
+// import pacchetto bandiere
+import CountryFlag from 'vue-country-flag-next';
 
 export default {
     name: 'CardElement',
@@ -8,18 +9,31 @@ export default {
     },
     components: {
         CountryFlag
+    },
+    computed: {
+        // gestione casi limite lang/flags
+        getLanguage() {
+            switch (this.info.original_language) {
+                case 'en':
+                    return 'gb';
+                case 'ja':
+                    return 'jpn';
+                
+                default:
+                    return this.info.original_language;
+            }
+        }
     }
 }
 </script>
 
 <template>
     <!-- card -->
-    <div  >
+    <div>
         <h3>{{ info.title }}</h3>
         <h4>{{ info.original_title }}</h4>
-        <div>{{ info.original_language }}</div>
+        <country-flag :country="getLanguage" size='small' />
         <div>{{ info.vote_average }}</div>
-        <country-flag country='fr' size='small'/>
     </div>
     <!-- /card -->
 </template>
