@@ -33,6 +33,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 2.1875rem;
+    padding: 1.5625rem 2.1875rem;
 }
 </style>
