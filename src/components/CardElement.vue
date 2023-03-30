@@ -21,7 +21,7 @@ export default {
                     return 'gb';
                 case 'ja':
                     return 'jpn';
-                // to do - add: ko
+                // to do - add: ko *****
                 default:
                     return this.info.original_language;
             }
@@ -45,14 +45,22 @@ export default {
 <template>
     <!-- card -->
     <div>
-        <img :src="imageUrl + info.poster_path" :alt="getTitle" v-if="info.poster_path !== null">
-        <div class="alt-cover" v-else>Copertina non disponibile</div>
+        <!-- img cover -->
+        <div>
+            <img :src="imageUrl + info.poster_path" :alt="getTitle" v-if="info.poster_path !== null">
+            <!-- alt cover -->
+            <div class="alt-cover" v-else>Copertina non disponibile</div> 
+        </div>
+        <!-- /img cover -->
         <h3>{{ getTitle }}</h3>
         <h4>{{ info.original_title }}</h4>
+        <!-- flag lingua -->
         <country-flag :country="getLanguage" size='small' />
         <!-- voto stelle -->
         <div>
+            <!-- ciclo for stelle piene -->
             <font-awesome-icon icon="fa-star" v-for="n in getVote" />
+            <!-- ciclo for stelle vuote -->
             <font-awesome-icon icon="fa-regular fa-star" v-for="n in nStar - getVote" />
         </div>
         <!-- /voto stelle -->

@@ -1,4 +1,5 @@
 <script>
+// import sezioni movies e tv shows
 import MoviesSection from './MoviesSection.vue'
 import TvshowsSection from './TvshowsSection.vue';
 
@@ -13,7 +14,9 @@ export default {
 
 <template>
     <main>
+        <!-- sezione movies -->
         <MoviesSection />
+        <!-- sezione tv shows -->
         <TvshowsSection />
     </main>
 </template>

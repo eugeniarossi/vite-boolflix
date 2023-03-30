@@ -5,6 +5,7 @@ export default {
 </script>
 
 <template>
+    <!-- logo -->
     <img src="/Logonetflix.png" alt="logo netflix">
 </template>
 

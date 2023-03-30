@@ -1,8 +1,9 @@
 <script>
+// import axios
 import axios from 'axios';
-// importo lo store
+// import store
 import { store } from './store';
-// importo header e main
+// import header e main
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
 

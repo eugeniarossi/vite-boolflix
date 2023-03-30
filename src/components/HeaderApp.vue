@@ -10,6 +10,7 @@ export default {
         SearchElement
     },
     methods: {
+        // emit dell'evento search
         search() {
             this.$emit('search');
         }
@@ -19,7 +20,9 @@ export default {
 
 <template>
     <header>
+        <!-- logo -->
         <LogoElement />
+        <!-- search input -->
         <SearchElement @search="search" />
     </header>
 </template>
