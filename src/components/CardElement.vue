@@ -5,7 +5,8 @@ import CountryFlag from 'vue-country-flag-next';
 export default {
     name: 'CardElement',
     props: {
-        info: Object
+        info: Object,
+        imageUrl: String
     },
     components: {
         CountryFlag
@@ -18,7 +19,7 @@ export default {
                     return 'gb';
                 case 'ja':
                     return 'jpn';
-
+                // to do - add: ko
                 default:
                     return this.info.original_language;
             }
@@ -38,6 +39,8 @@ export default {
 <template>
     <!-- card -->
     <div>
+        <img :src="imageUrl + info.poster_path" :alt="getTitle" v-if="info.poster_path !== null">
+        <div v-else>Copertina non disponibile</div>
         <h3>{{ getTitle }}</h3>
         <h4>{{ info.original_title }}</h4>
         <country-flag :country="getLanguage" size='small' />
