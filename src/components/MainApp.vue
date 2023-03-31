@@ -39,7 +39,8 @@ main {
 
     :deep(ul) {
         display: flex;
-        overflow-y: scroll;
+        list-style: none;
+        overflow-x: scroll;
     }
 
     :deep(h2) {

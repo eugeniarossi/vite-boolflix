@@ -1,8 +1,2 @@
 @use '_partials/reset' as *;
 @use '_partials/variables' as *;
-
-body {
-    background-color: $primary;
-    color: $font_primary;
-    font-family: "Lato";
-}

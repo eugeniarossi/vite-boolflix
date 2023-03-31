@@ -28,14 +28,14 @@ export default {
 select {
     height: 100%;
     background-color: inherit;
-    color: $font_primary;
+    color: $font_primary_color;
     padding: 0 .3125rem;
     border: none;
     width: 12.5rem;
     font-family: "Lato";
 
     * {
-        background-color: $primary;
+        background-color: $primary_color;
         height: 1.25rem;
     }
 }

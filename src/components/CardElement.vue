@@ -83,7 +83,6 @@ article {
         padding: .625rem 1.25rem;
     }
 }
-
 .alt-cover {
     width: 21.375rem;
 }

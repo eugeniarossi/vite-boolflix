@@ -39,7 +39,7 @@ export default {
     &>* {
         height: 100%;
         background-color: inherit;
-        color: $font_primary;
+        color: $font_primary_color;
         border: none;
     }
 
