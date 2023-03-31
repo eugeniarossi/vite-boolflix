@@ -66,6 +66,8 @@ export default {
                 <font-awesome-icon icon="fa-regular fa-star" v-for="n in nStar - getVote" />
             </div>
             <!-- /voto stelle -->
+            <!-- overview -->
+            <div>{{ info.overview }}</div>
         </div>
         <!-- /caption -->
     </article>
@@ -74,15 +76,32 @@ export default {
 
 <style scoped lang="scss">
 article {
-    height: 100%;
+    height: 31.875rem;
+    width: 21.375rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: auto;
+        align-self: center;
+        justify-self: center;
+    }
+
     .caption {
         padding: .625rem 1.25rem;
+        display: none;
+    }
+
+    &:hover .image {
+        display: none;
+    }
+
+    &:hover .caption {
+        display: block;
     }
 }
+
 .alt-cover {
     width: 21.375rem;
 }
