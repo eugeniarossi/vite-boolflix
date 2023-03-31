@@ -3,6 +3,7 @@ import { reactive } from 'vue';
 
 export const store = reactive({
     searchKey: '',
+    selectValue: 'all',
     moviesResults: [],
     tvshowsResults: [],
     // stato della ricerca - default true

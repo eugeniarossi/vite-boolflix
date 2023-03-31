@@ -1,25 +1,34 @@
 <script>
+import { store } from '../store';
+// import standard view
+import StandardView from './StandardView.vue';
 // import view divisa per categorie
 import CategoriesView from './CategoriesView.vue'
-import StandardView from './StandardView.vue';
+
 
 export default {
     name: 'MainApp',
     components: {
-        CategoriesView,
-        StandardView
+        store,
+        StandardView,
+        CategoriesView
+    },
+    data() {
+        return {
+            store
+        }
     }
 }
 </script>
 
 <template>
     <main>
-        <!-- categories view -->
-        <CategoriesView />
-        <!-- /categories view -->
         <!-- standardView />-->
-        <StandardView />
+        <StandardView v-if="store.selectValue === 'all'" />
         <!-- /standardView />-->
+        <!-- categories view -->
+        <CategoriesView v-else />
+        <!-- /categories view -->
     </main>
 </template>
 
