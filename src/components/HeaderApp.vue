@@ -25,10 +25,10 @@ export default {
         <!-- logo -->
         <LogoElement />
         <div id="inputs">
-            <!-- select input -->
-            <SelectElement />
             <!-- search input -->
             <SearchElement @search="search" />
+            <!-- select input -->
+            <SelectElement />
         </div>
     </header>
 </template>
@@ -48,6 +48,7 @@ header {
 
         & > * {
             height: 100%;
+            border-bottom: .125rem solid #171717;
         }
     }
 }

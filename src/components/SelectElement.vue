@@ -30,5 +30,12 @@ select {
     background-color: inherit;
     color: $font_primary;
     padding: 0 .3125rem;
+    border: none;
+    width: 12.5rem;
+
+    * {
+        background-color: $primary;
+        height: 1.25rem;
+    }
 }
 </style>

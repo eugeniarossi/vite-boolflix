@@ -44,7 +44,6 @@ export default {
     }
 
     input {
-        border-bottom: .125rem solid #171717;
         padding: .3125rem .75rem;
     }
 
