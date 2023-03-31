@@ -32,6 +32,7 @@ select {
     padding: 0 .3125rem;
     border: none;
     width: 12.5rem;
+    font-family: "Lato";
 
     * {
         background-color: $primary;

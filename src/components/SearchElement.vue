@@ -45,6 +45,7 @@ export default {
 
     input {
         padding: .3125rem .75rem;
+        font-family: "Lato";
     }
 
     button {

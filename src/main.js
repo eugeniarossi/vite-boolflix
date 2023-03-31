@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import './assets/main.scss'
 import App from './App.vue'
 
+// import font
+import "@fontsource/lato";
+
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
