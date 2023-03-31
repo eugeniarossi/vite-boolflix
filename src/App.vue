@@ -28,6 +28,7 @@ export default {
       axios.get(store.config.url_movies, {
         params: {
           api_key: store.config.api_key,
+          language: store.defaultLang,
           query: store.searchKey
         }
       })
@@ -47,6 +48,7 @@ export default {
       axios.get(store.config.url_tvshows, {
         params: {
           api_key: store.config.api_key,
+          language: store.defaultLang,
           query: store.searchKey
         }
       })
@@ -76,6 +78,3 @@ export default {
     <MainApp />
   </div>
 </template>
-
-<style lang="scss">
-</style>

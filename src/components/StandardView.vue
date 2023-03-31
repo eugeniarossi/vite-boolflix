@@ -25,7 +25,7 @@ export default {
 <template>
     <section>
         <div v-show="store.moviesResults.length !== 0 || store.tvshowsResults.length !== 0">
-            <h2>All</h2>
+            <h2>Tutte le categorie</h2>
             <!-- lista dei tv shows trovati -->
             <ul>
                 <!-- elemento lista tv shows -->

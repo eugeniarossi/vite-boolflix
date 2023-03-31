@@ -6,6 +6,7 @@ export const store = reactive({
     selectValue: 'all',
     moviesResults: [],
     tvshowsResults: [],
+    defaultLang: 'it-IT',
     // stato della ricerca - default true
     searchMoviesResult: true,
     searchTvshowsResult: true,

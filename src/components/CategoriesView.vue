@@ -23,7 +23,7 @@ export default {
     <!-- SEZIONE MOVIES -->
     <section id="movies-section">
         <div v-show="store.moviesResults.length !== 0">
-            <h2>Movies</h2>
+            <h2>Film</h2>
             <!-- lista dei film trovati -->
             <ul>
                 <!-- elemento lista replicato -->
@@ -46,7 +46,7 @@ export default {
     <!-- SEZIONE TV SHOWS -->
     <section id="tvshows-section">
         <div v-show="store.tvshowsResults.length !== 0">
-            <h2>Tv Shows</h2>
+            <h2>Serie TV</h2>
             <!-- lista dei tv shows trovati -->
             <ul>
                 <!-- elemento lista replicato -->

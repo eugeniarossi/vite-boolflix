@@ -41,6 +41,7 @@ main {
         display: flex;
         list-style: none;
         overflow-x: scroll;
+        padding-right: 3.125rem;
     }
 
     :deep(h2) {
