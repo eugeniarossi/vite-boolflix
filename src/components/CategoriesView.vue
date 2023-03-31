@@ -23,7 +23,7 @@ export default {
     <!-- SEZIONE MOVIES -->
     <section id="movies-section">
         <div v-show="store.moviesResults.length !== 0">
-            <h2>Film</h2>
+            <h3 class="category">Film</h3>
             <!-- lista dei film trovati -->
             <ul>
                 <!-- elemento lista replicato -->
@@ -46,7 +46,7 @@ export default {
     <!-- SEZIONE TV SHOWS -->
     <section id="tvshows-section">
         <div v-show="store.tvshowsResults.length !== 0">
-            <h2>Serie TV</h2>
+            <h3 class="category">Serie TV</h3>
             <!-- lista dei tv shows trovati -->
             <ul>
                 <!-- elemento lista replicato -->
@@ -68,6 +68,6 @@ export default {
 
 <style scoped lang="scss">
 #movies-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.75rem;
 }
 </style>

@@ -35,16 +35,18 @@ export default {
 
 <style scoped lang="scss">
 main {
-    padding: 1.875rem 0 3.4375rem 2.1875rem;
+    padding: 2.1875rem 0 3.4375rem 2.1875rem;
 
     :deep(ul) {
         display: flex;
         list-style: none;
         overflow-x: scroll;
         padding-right: 3.125rem;
+        padding-bottom: .3125rem;
+        margin-left: -0.125rem;
     }
 
-    :deep(h2) {
+    :deep(.category) {
         margin-bottom: 1.25rem;
     }
 }

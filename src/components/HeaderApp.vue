@@ -39,7 +39,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5625rem 2.1875rem;
+    padding: 2.1875rem;
 
     #inputs {
         display: flex;

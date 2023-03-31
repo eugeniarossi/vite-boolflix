@@ -53,21 +53,22 @@ export default {
         <!-- /image -->
         <!-- caption -->
         <div class="caption">
-            <!-- /img cover -->
             <h3>{{ title }}</h3>
             <h4>{{ original_title }}</h4>
-            <!-- flag lingua -->
-            <country-flag :country="getLanguage" size='small' />
-            <!-- voto stelle -->
-            <div>
-                <!-- ciclo for stelle piene -->
-                <font-awesome-icon icon="fa-star" v-for="n in getVote" />
-                <!-- ciclo for stelle vuote -->
-                <font-awesome-icon icon="fa-regular fa-star" v-for="n in nStar - getVote" />
+            <div class="infos">
+                <!-- flag lingua -->
+                <country-flag :country="getLanguage" size='small' class="flag" />
+                <!-- voto stelle -->
+                <div>
+                    <!-- ciclo for stelle piene -->
+                    <font-awesome-icon icon="fa-star" v-for="n in getVote" />
+                    <!-- ciclo for stelle vuote -->
+                    <font-awesome-icon icon="fa-regular fa-star" v-for="n in nStar - getVote" />
+                </div>
+                <!-- /voto stelle -->
             </div>
-            <!-- /voto stelle -->
             <!-- overview -->
-            <div>{{ info.overview }}</div>
+            <div class="overview">{{ info.overview }}</div>
         </div>
         <!-- /caption -->
     </article>
@@ -80,17 +81,13 @@ article {
     width: 21.375rem;
     display: flex;
     overflow: hidden;
+    margin: 2px;
 
     img {
-        height: 100%;
+        min-height: 100%;
         width: auto;
         align-self: center;
         justify-self: center;
-    }
-
-    .caption {
-        padding: .625rem 1.25rem;
-        display: none;
     }
 
     &:hover .image {
@@ -99,6 +96,32 @@ article {
 
     &:hover .caption {
         display: block;
+    }
+
+    .caption {
+        padding: 2.1875rem 1.25rem;
+        display: none;
+        overflow: hidden;
+        margin-bottom: 2.1875rem;
+
+        h3 {
+            padding-bottom: .3125rem;
+        }
+
+        h4 {
+            margin-bottom: .9375rem;
+        }
+
+        .infos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.75rem;
+        }
+
+        .overview {
+            line-height: 1.3;
+        }
     }
 }
 

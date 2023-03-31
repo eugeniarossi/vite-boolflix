@@ -23,9 +23,10 @@ export default {
 </script>
 
 <template>
+    <!-- risultati -->
     <section>
         <div v-show="store.moviesResults.length !== 0 || store.tvshowsResults.length !== 0">
-            <h2>Tutte le categorie</h2>
+            <h3 class="category">Tutte le categorie</h3>
             <!-- lista dei tv shows trovati -->
             <ul>
                 <!-- elemento lista tv shows -->
@@ -42,4 +43,5 @@ export default {
         <div v-show="store.searchMoviesResult === false && store.searchTvshowsResult === false">
             Nessun risultato trovato</div>
     </section>
+    <!-- /risultati -->
 </template>
