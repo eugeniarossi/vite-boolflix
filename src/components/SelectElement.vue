@@ -21,4 +21,14 @@ export default {
     </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+// import variabili
+@use '../assets/_partials/variables' as *;
+
+select {
+    height: 100%;
+    background-color: inherit;
+    color: $font_primary;
+    padding: 0 .3125rem;
+}
+</style>

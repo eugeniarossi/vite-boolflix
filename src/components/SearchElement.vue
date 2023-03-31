@@ -28,8 +28,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
+// import variabili
+@use '../assets/_partials/variables' as *;
+
 #search-container {
-    height: 2.1875rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +39,7 @@ export default {
     &>* {
         height: 100%;
         background-color: inherit;
-        color: rgb(234, 234, 234);
+        color: $font_primary;
         border: none;
     }
 

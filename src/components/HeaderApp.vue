@@ -40,5 +40,15 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.5625rem 2.1875rem;
+
+    #inputs {
+        display: flex;
+        gap: 1.875rem;
+        height: 2.1875rem;
+
+        & > * {
+            height: 100%;
+        }
+    }
 }
 </style>
