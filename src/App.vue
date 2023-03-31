@@ -33,13 +33,13 @@ export default {
       })
         .then((response) => {
           // salvo nello store il risultato della ricerca
-          store.movieResults = response.data.results;
+          store.moviesResults = response.data.results;
           // aggiungo la proprietà myType ad ogni film
-          store.movieResults.forEach((element) => {
+          store.moviesResults.forEach((element) => {
             element.myType = 'movie'
           })
           // lo stato della ricerca movies diventa false se non ci sono risultati
-          if (store.movieResults.length === 0) {
+          if (store.moviesResults.length === 0) {
             store.searchMoviesResult = false;
           }
         });

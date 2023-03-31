@@ -20,12 +20,12 @@ export default {
 <template>
     <!-- SEZIONE MOVIES -->
     <section id="movies-section">
-        <div v-show="store.movieResults.length !== 0">
+        <div v-show="store.moviesResults.length !== 0">
             <h2>Movies</h2>
             <!-- lista dei film trovati -->
             <ul>
                 <!-- elemento lista replicato -->
-                <li v-for="result in store.movieResults">
+                <li v-for="result in store.moviesResults">
                     <!-- elemento card -->
                     <CardElement :info="result" :imageUrl="store.config.url_img + store.config.img_size"
                         :nStar="store.config.nStar" />

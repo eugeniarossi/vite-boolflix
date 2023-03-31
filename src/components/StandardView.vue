@@ -13,17 +13,22 @@ export default {
         return {
             store
         }
+    },
+    computed: {
+      results() {
+        return [...this.store.moviesResults, ...this.store.tvshowsResults]
+      }
     }
 }
 </script>
 
 <template>
-    <section v-show="store.allResults.length !== 0">
+    <section v-show="store.moviesResults.length !== 0 || store.tvshowsResults.length !== 0">
         <h2>All</h2>
         <!-- lista dei tv shows trovati -->
         <ul>
             <!-- elemento lista tv shows -->
-            <li v-for="result in store.tvshowsResults">
+            <li v-for="result in results">
                 <!-- elemento card -->
                 <CardElement :info="result" :imageUrl="store.config.url_img + store.config.img_size"
                     :nStar="store.config.nStar" />
@@ -32,6 +37,7 @@ export default {
             <!-- /elemento lista tv shows -->
         </ul>
         <!-- alternativa per nessun risultato -->
-        <div v-show="store.searchTvshowsResult === false">Nessun risultato trovato in tv shows</div>
+        <div v-show="store.searchTvshowsResult === false && store.tvshowsResults === false">
+            Nessun risultato trovato</div>
     </section>
 </template>

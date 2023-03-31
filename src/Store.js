@@ -3,10 +3,8 @@ import { reactive } from 'vue';
 
 export const store = reactive({
     searchKey: '',
-    movieResults: [],
+    moviesResults: [],
     tvshowsResults: [],
-    allResults: [],
-    defaultLang: 'it-IT',
     // stato della ricerca - default true
     searchMoviesResult: true,
     searchTvshowsResult: true,
@@ -17,17 +15,6 @@ export const store = reactive({
         url_tvshows: 'https://api.themoviedb.org/3/search/tv',
         url_img: 'https://image.tmdb.org/t/p/',
         img_size: 'w342',
-        /*
-        "poster_sizes": [
-  "w92",
-  "w154",
-  "w185",
-  "w342",
-  "w500",
-  "w780",
-  "original"
-]
-*/
         nStar: 5
     }
 });
