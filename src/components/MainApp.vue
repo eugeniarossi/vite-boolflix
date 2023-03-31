@@ -1,28 +1,39 @@
 <script>
-// import sezioni movies e tv shows
-import MoviesSection from './MoviesSection.vue'
-import TvshowsSection from './TvshowsSection.vue';
+// import view divisa per categorie
+import CategoriesView from './CategoriesView.vue'
+import StandardView from './StandardView.vue';
 
 export default {
     name: 'MainApp',
     components: {
-        MoviesSection,
-        TvshowsSection
+        CategoriesView,
+        StandardView
     }
 }
 </script>
 
 <template>
     <main>
-        <!-- sezione movies -->
-        <MoviesSection />
-        <!-- sezione tv shows -->
-        <TvshowsSection />
+        <!-- categories view -->
+        <CategoriesView />
+        <!-- /categories view -->
+        <!-- standardView />-->
+        <StandardView />
+        <!-- /standardView />-->
     </main>
 </template>
 
 <style scoped lang="scss">
 main {
     padding: 1.875rem 0 3.4375rem 2.1875rem;
+
+    :deep(ul) {
+        display: flex;
+        overflow-y: scroll;
+    }
+
+    :deep(h2) {
+        margin-bottom: 1.25rem;
+    }
 }
 </style>

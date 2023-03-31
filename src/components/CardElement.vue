@@ -27,12 +27,11 @@ export default {
             }
         },
         // gestione titolo per film e tvshows
-        getTitle() {
-            if (this.info.myType === 'movie') {
-                return this.info.title;
-            } else {
-                return this.info.original_name;
-            }
+        title() {
+            return this.info.title || this.info.name
+        },
+        original_title() {
+            return this.info.original_title || this.info.original_name
         },
         // calcolo del voto da 1 a 5 per eccesso
         getVote() {
@@ -47,7 +46,7 @@ export default {
     <article>
         <!-- image -->
         <div class="image">
-            <img :src="imageUrl + info.poster_path" :alt="getTitle" v-if="info.poster_path !== null">
+            <img :src="imageUrl + info.poster_path" :alt="title" v-if="info.poster_path !== null">
             <!-- alt cover -->
             <div class="alt-cover" v-else>Copertina non disponibile</div>
         </div>
@@ -55,8 +54,8 @@ export default {
         <!-- caption -->
         <div class="caption">
             <!-- /img cover -->
-            <h3>{{ getTitle }}</h3>
-            <h4>{{ info.original_title }}</h4>
+            <h3>{{ title }}</h3>
+            <h4>{{ original_title }}</h4>
             <!-- flag lingua -->
             <country-flag :country="getLanguage" size='small' />
             <!-- voto stelle -->

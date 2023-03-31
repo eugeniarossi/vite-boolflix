@@ -1,12 +1,14 @@
 <script>
-// import logo e search input
+// import logo - select - search input
 import LogoElement from './LogoElement.vue'
+import SelectElement from './SelectElement.vue';
 import SearchElement from './SearchElement.vue';
 
 export default {
     name: 'HeaderApp',
     components: {
         LogoElement,
+        SelectElement,
         SearchElement
     },
     methods: {
@@ -22,8 +24,12 @@ export default {
     <header>
         <!-- logo -->
         <LogoElement />
-        <!-- search input -->
-        <SearchElement @search="search" />
+        <div id="inputs">
+            <!-- select input -->
+            <SelectElement />
+            <!-- search input -->
+            <SearchElement @search="search" />
+        </div>
     </header>
 </template>
 
