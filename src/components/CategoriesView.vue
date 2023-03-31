@@ -18,6 +18,8 @@ export default {
 </script>
 
 <template>
+    <div v-show="store.searchMoviesResult === false && store.searchTvshowsResult === false">
+            Nessun risultato trovato</div>
     <!-- SEZIONE MOVIES -->
     <section id="movies-section">
         <div v-show="store.moviesResults.length !== 0">
@@ -36,7 +38,8 @@ export default {
             <!-- /lista dei film trovati -->
         </div>
         <!-- alternativa per nessun risultato -->
-        <div v-show="store.searchMoviesResult === false">Nessun risultato trovato in movies</div>
+        <div v-show="store.searchMoviesResult === false && store.searchTvshowsResult === true">
+            Nessun risultato trovato in movies</div>
     </section>
     <!-- /SEZIONE MOVIES -->
     
@@ -57,7 +60,8 @@ export default {
             </ul>
         </div>
         <!-- alternativa per nessun risultato -->
-        <div v-show="store.searchTvshowsResult === false">Nessun risultato trovato in tv shows</div>
+        <div v-show="store.searchTvshowsResult === false && store.searchMoviesResult === true">
+            Nessun risultato trovato in tv shows</div>
     </section>
     <!-- /SEZIONE TV SHOWS -->
 </template>

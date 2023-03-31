@@ -1,4 +1,5 @@
 <script>
+// import store
 import { store } from '../store';
 // import standard view
 import StandardView from './StandardView.vue';
