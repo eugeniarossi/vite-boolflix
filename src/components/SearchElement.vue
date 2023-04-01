@@ -36,7 +36,7 @@ export default {
     align-items: center;
     justify-content: center;
 
-    &>* {
+    & > * {
         height: 100%;
         background-color: inherit;
         color: $font_primary_color;

@@ -67,6 +67,8 @@ export default {
         });
       // azzero l'input utente
       store.searchKey = '';
+      // scrolling reset
+      window.scrollTo(0,0); 
     }
   }
 }

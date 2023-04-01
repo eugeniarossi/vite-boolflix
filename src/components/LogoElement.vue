@@ -6,7 +6,7 @@ export default {
 
 <template>
     <!-- logo -->
-    <img src="/Logonetflix.png" alt="logo netflix">
+    <img src="/boolflix.png" alt="logo netflix">
 </template>
 
 <style scoped lang="scss">
