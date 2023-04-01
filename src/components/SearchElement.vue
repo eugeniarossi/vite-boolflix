@@ -54,6 +54,11 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        & :hover {
+            color: $secondary-font-color;
+            transition: color 2s;
+        }
     }
 }
 </style>
