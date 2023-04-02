@@ -16,11 +16,11 @@ export default {
 
 <template>
     <!-- search input container -->
-    <div id="search-container">
+    <div id="search-container" class="flex-center">
         <!-- input -->
         <input type="text" v-model="store.searchKey" @keyup.enter="$emit('search')">
         <!-- search button -->
-        <button type="button" @click="$emit('search')">
+        <button class="flex-center" type="button" @click="$emit('search')">
             <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
         </button>
     </div>
@@ -32,9 +32,6 @@ export default {
 @use '../assets/_partials/variables' as *;
 
 #search-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-right: 1.875rem;
 
     & > * {
@@ -52,9 +49,6 @@ export default {
     button {
         width: 2.1875rem;
         font-size: 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         & :hover {
             color: $secondary-font-color;

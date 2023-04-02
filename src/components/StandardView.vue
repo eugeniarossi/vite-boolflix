@@ -28,7 +28,7 @@ export default {
         <div v-show="store.moviesResults.length !== 0 || store.tvshowsResults.length !== 0">
             <h3 class="category">Tutte le categorie</h3>
             <!-- lista dei tv shows trovati -->
-            <ul class="resultsList">
+            <ul class="results-list">
                 <!-- elemento lista tv shows -->
                 <li v-for="result in results">
                     <!-- elemento card -->

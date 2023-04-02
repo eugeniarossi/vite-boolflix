@@ -25,7 +25,7 @@ export default {
         <div v-show="store.moviesResults.length !== 0">
             <h3 class="category">Film</h3>
             <!-- lista dei film trovati -->
-            <ul class="resultsList">
+            <ul class="results-ist">
                 <!-- elemento lista replicato -->
                 <li v-for="result in store.moviesResults">
                     <!-- elemento card -->
@@ -48,7 +48,7 @@ export default {
         <div v-show="store.tvshowsResults.length !== 0">
             <h3 class="category">Serie TV</h3>
             <!-- lista dei tv shows trovati -->
-            <ul class="resultsList">
+            <ul class="results-list">
                 <!-- elemento lista replicato -->
                 <li v-for="result in store.tvshowsResults">
                     <!-- elemento card -->
