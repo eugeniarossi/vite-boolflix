@@ -5,8 +5,10 @@ export default {
 </script>
 
 <template>
-    <!-- logo -->
-    <img src="/boolflix.png" alt="logo netflix">
+    <div id="logo">
+        <!-- logo -->
+        <img src="/boolflix.png" alt="logo netflix">
+    </div>
 </template>
 
 <style scoped lang="scss">

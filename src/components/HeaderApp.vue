@@ -24,32 +24,42 @@ export default {
     <header>
         <!-- logo -->
         <LogoElement />
+        <!-- inputs -->
         <div id="inputs">
             <!-- search input -->
             <SearchElement @search="search" />
             <!-- select input -->
             <SelectElement />
         </div>
+        <!-- inputs -->
     </header>
 </template>
 
 <style scoped lang="scss">
 header {
-    max-height: 4.375rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+    max-height: 8.125rem;
+    justify-content: flex-start;
     padding: 2.1875rem;
 
     #inputs {
         display: flex;
-        gap: 1.875rem;
-        height: 2.1875rem;
 
-        & > * {
-            height: 100%;
+        &>* {
             border-bottom: .125rem solid #171717;
         }
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    header {
+        flex-direction: row;
+        max-height: 4.375rem;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 </style>

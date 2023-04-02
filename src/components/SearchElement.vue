@@ -35,9 +35,10 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 1.875rem;
 
     & > * {
-        height: 100%;
+        height: 2.5rem;
         background-color: inherit;
         color: $font_primary_color;
         border: none;
