@@ -74,15 +74,20 @@ export default {
     firstPage() {
       return this.active = true;
     }
+  },
+  created() {
+    // ricerca di default all'avvio
+    this.store.searchKey = 'a';
+    this.search();
   }
 }
 </script>
 
 <template>
-  <div id="first-page" v-bind:class="{ dnone : active }" @click="firstPage" @keyup="firstPage">
+  <div id="first-page" v-bind:class="{ dnone : active }" @click="firstPage">
     <img src="/boolflix.png" alt="logo">
   </div>
-  <div id="container">
+  <div id="container" v-bind:class="{ dnone : !active }">
     <HeaderApp @search="search" />
     <MainApp />
   </div>
