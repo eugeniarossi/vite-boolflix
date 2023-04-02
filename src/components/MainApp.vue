@@ -24,6 +24,9 @@ export default {
 
 <template>
     <main>
+        <!-- alternativa per nessun risultato -->
+        <div id="no-results" v-show="store.searchMoviesResult === false && store.searchTvshowsResult === false">
+            Nessun risultato trovato</div>
         <!-- standardView />-->
         <StandardView v-if="store.selectValue === 'all'" />
         <!-- /standardView />-->
@@ -48,6 +51,10 @@ main {
 
     :deep(.category) {
         margin-bottom: 1.25rem;
+    }
+
+    #no-results{
+        text-align: center;
     }
 }
 </style>

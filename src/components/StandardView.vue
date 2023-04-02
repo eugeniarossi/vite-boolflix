@@ -39,9 +39,6 @@ export default {
                 <!-- /elemento lista tv shows -->
             </ul>
         </div>
-        <!-- alternativa per nessun risultato -->
-        <div v-show="store.searchMoviesResult === false && store.searchTvshowsResult === false">
-            Nessun risultato trovato</div>
     </section>
     <!-- /risultati -->
 </template>

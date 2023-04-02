@@ -18,8 +18,6 @@ export default {
 </script>
 
 <template>
-    <div v-show="store.searchMoviesResult === false && store.searchTvshowsResult === false">
-            Nessun risultato trovato</div>
     <!-- SEZIONE MOVIES -->
     <section id="movies-section">
         <div v-show="store.moviesResults.length !== 0">
