@@ -48,7 +48,7 @@ header {
     #inputs {
         display: flex;
 
-        &>* {
+        & > * {
             border-bottom: .125rem solid #171717;
         }
     }

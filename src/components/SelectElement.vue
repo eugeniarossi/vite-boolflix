@@ -22,7 +22,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-// import variabili
+// import variabili scss
 @use '../assets/_partials/variables' as *;
 
 select {

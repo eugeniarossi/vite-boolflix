@@ -7,8 +7,6 @@ import { store } from './store';
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
 
-
-
 export default {
   name: 'App',
   components: {
@@ -28,7 +26,7 @@ export default {
       store.searchMoviesResult = true;
       store.searchTvshowsResult = true;
       // RICERCA SULL'API DEI FILM CHE INCLUDONO L'INPUT DELL'UTENTE
-      axios.get(store.config.url_movies, {
+      axios.get(store.config.url_api + store.config.url_movies, {
         params: {
           api_key: store.config.api_key,
           language: store.defaultLang,
@@ -38,17 +36,13 @@ export default {
         .then((response) => {
           // salvo nello store il risultato della ricerca
           store.moviesResults = response.data.results;
-          // aggiungo la proprietà myType ad ogni film
-          store.moviesResults.forEach((element) => {
-            element.myType = 'movie'
-          })
           // lo stato della ricerca movies diventa false se non ci sono risultati
           if (store.moviesResults.length === 0) {
             store.searchMoviesResult = false;
           }
         });
       // RICERCA SULL'API DEI TVSHOWS CHE INCLUDONO L'INPUT DELL'UTENTE
-      axios.get(store.config.url_tvshows, {
+      axios.get(store.config.url_api + store.config.url_tvshows, {
         params: {
           api_key: store.config.api_key,
           language: store.defaultLang,
@@ -58,11 +52,6 @@ export default {
         .then((response) => {
           // salvo nello store il risultato della ricerca
           store.tvshowsResults = response.data.results;
-          // aggiungo la proprietà myType ad ogni tv show
-          store.tvshowsResults.forEach((element) => {
-            element.myType = 'tvshow'
-          })
-
           // lo stato della ricerca tv shows diventa false se non ci sono risultati
           if (store.tvshowsResults.length === 0) {
             store.searchTvshowsResult = false;
@@ -98,6 +87,7 @@ export default {
 <style lang="scss">
 @use './assets/_partials/variables' as *;
 
+// prima pagina all'avvio
 #first-page {
   height: 100vh;
   width: 100vw;
@@ -118,6 +108,7 @@ export default {
   padding: 1.875rem;
 }
 
+// classe toggle
 .dnone {
   display: none;
 }
