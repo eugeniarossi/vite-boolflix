@@ -15,7 +15,8 @@ export default {
   },
   data() {
     return {
-      store
+      store,
+      active: false
     }
   },
   methods: {
@@ -68,15 +69,55 @@ export default {
       // azzero l'input utente
       store.searchKey = '';
       // scrolling reset
-      window.scrollTo(0,0); 
+      window.scrollTo(0, 0);
+    },
+    firstPage() {
+      return this.active = true;
     }
   }
 }
 </script>
 
 <template>
+  <div id="first-page" v-bind:class="{ dnone : active }" @click="firstPage" @keyup="firstPage">
+    <img src="/boolflix.png" alt="logo">
+  </div>
   <div id="container">
     <HeaderApp @search="search" />
     <MainApp />
   </div>
 </template>
+
+<style lang="scss">
+@use './assets/_partials/variables' as *;
+
+#first-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: $primary-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#first-page img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 21.875rem;
+  padding: 1.875rem;
+}
+
+.dnone {
+  display: none;
+}
+
+@media screen and (min-width: 48rem) {
+    #first-page img {
+      max-width: 600px;
+    }
+}
+</style>
