@@ -55,6 +55,7 @@ main {
 
     #no-results{
         text-align: center;
+        padding-top: 3.75rem;
     }
 }
 </style>
