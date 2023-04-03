@@ -75,13 +75,17 @@ export default {
 </script>
 
 <template>
+  <!-- first page -->
   <div id="first-page" v-bind:class="{ dnone : active }" @click="firstPage">
     <img src="/boolflix.png" alt="logo">
   </div>
+  <!-- /first page -->
+  <!-- container -->
   <div id="container" v-bind:class="{ dnone : !active }">
     <HeaderApp @search="search" />
     <MainApp />
   </div>
+  <!-- /container -->
 </template>
 
 <style lang="scss">
